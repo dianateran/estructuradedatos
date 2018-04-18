@@ -1,0 +1,36 @@
+
+using namespace std;
+
+int main (){
+int numeros[3][3];
+
+for(int i=0;i<3;i++){                                       /// RELLENAR FILAS
+for(int j=0;j<3;j++){
+cout<<"Digite un numero ["<<i<<"]["<<j<<"]: ";       /// RELLENAR COLUMNAS
+cin>>numeros[i][j];                                  /// INGRESAR LA CANTIDAD DE ELEMENTOS QUE VAN A TENER LAS FILAS Y COLUMNAS DE NUESTRA MATRIZ
+}
+}
+
+cout<<"Matriz Original\n"; 
+for(int i=0;i<3;i++){                                          // CARGAR LA MATRIZ
+for(int j=0;j<3;j++){                                       /// INGRESAR NUMEROS PARA RELLENAR FILAS Y COLUMNAS (I= FILAS)(J = COLUMNAS)
+cout<<numeros[i][j];
+}
+cout<<"\n";
+}
+
+cout<<"\n Matriz Transpuesta \n";                                 ///FUNCION QUE REALIZA LA TRANSPUESTA DE NUESTRA MATRIZ
+for(int i=0;i<3;i++){
+for(int  j=0;j<3;j++){
+cout<<numeros[j][i];
+}
+cout<<"\n";
+}
+
+
+getch();
+return 0;
+}
+
+
+
