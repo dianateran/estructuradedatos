@@ -1,0 +1,70 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 30
+using namespace std;
+
+struct vec{
+	int v[MAX];
+};
+
+void cargarmatriz(vec M[MAX][MAX], int tam, int f, int c, int n);
+void mostrarmatriz(vec M[MAX][MAX], int tam, int f, int c, int n);
+
+
+void main()
+{
+	vec MAT[MAX][MAX];
+	int n,f,c;
+	do {
+		cout<<"Ingrese cuantas filas quiere en su matriz";
+		cin>>f;
+		cout<<"Ingrese cuantas columnas quiere en su matriz";
+		cin>>c;
+		cout<<"Ingrese el tamaño del vector: ";
+		cin>>n;
+
+	} while ((n>MAX)||(n<=0));
+
+	cargarmatriz(MAT, n, f, c, n);
+	mostrarmatriz(MAT, n,f,c, n);
+	getch();
+
+}
+
+
+void cargarmatriz(vec M[MAX][MAX], int tam, int f, int c, int n)
+{
+
+	for(int i=0;i<f;i++)
+		{for(int j=0;j<c;j++)
+		  {	for( int k=0;k<n;k++)
+			{
+				cout<<"M["<<i<<"]["<<j<<"]"<<endl;
+				cin>>M[i][j].v[k];
+
+			}
+	}
+	}
+
+}
+
+
+
+void mostrarmatriz(vec M[MAX][MAX], int tam, int f, int c, int n)
+{
+	
+	for(int i=0;i<f;i++)
+		{for(int j=0;j<c;j++)
+			{for( int k=0;k<n;k++)
+			{
+				cout<<"M["<<i<<"]["<<j<<"]["<<k<<"]"<<endl;
+				cout<<M[i][j].v[k];
+
+			}
+	}
+	}
+
+
+}
