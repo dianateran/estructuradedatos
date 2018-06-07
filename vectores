@@ -1,0 +1,16 @@
+#pragma once
+class vector
+{
+private:
+	int vec[100], n;
+public:
+	//cnstc
+	vector(void);
+	//dstrc
+	~vector(void);
+	//methods
+	void cargar(int vec[], int n);
+	void mostrar(int vec[], int n);
+	void order(int vec[], int n);
+	
+};
